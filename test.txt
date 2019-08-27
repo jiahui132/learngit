@@ -16,15 +16,21 @@ HEAD指向的版本就是当前版本，因此，Git允许我们在版本的历�
 
 删除文件
 
-电脑上删除文件
+#电脑上删除文件
 rm <file>
 
-git上删除
+#git上删除
 git rm <file> or git add <file>
 git commit commit_id
 
-恢复删除以前
+#恢复删除以前
 git checkout -- <file>
-
-
 git diff HEAD -- <file>
+
+添加远程库
+
+要关联一个远程库，使用命令git remote add origin git@server-name:path/repo-name.git；
+
+关联后，使用命令git push -u origin master第一次推送master分支的所有内容；
+
+此后，每次本地提交后，只要有必要，就可以使用命令git push origin master推送最新修改；
